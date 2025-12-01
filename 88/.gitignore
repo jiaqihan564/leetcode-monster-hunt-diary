@@ -1,0 +1,30 @@
+# 编译产物
+*.exe
+*.dll
+*.so
+*.o
+*.class
+
+# 依赖包
+node_modules/
+vendor/
+
+# 配置文件
+.env
+config.local
+
+# 日志文件
+*.log
+
+# IDE相关
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
