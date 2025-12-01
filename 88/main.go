@@ -35,6 +35,25 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 	}
 }
 
+func merge1(nums1 []int, m int, nums2 []int, n int) {
+	i := m - 1
+	j := n - 1
+	k := m + n - 1
+
+	for j >= 0 {
+		// 一定要先判断 i >= 0，再去访问 nums1[i]
+		if i >= 0 && nums1[i] > nums2[j] {
+			nums1[k] = nums1[i]
+			i--
+		} else {
+			nums1[k] = nums2[j]
+			j--
+		}
+		k--
+	}
+
+}
+
 func main() {
 	nums1 := []int{1, 2, 3, 0, 0, 0}
 	nums2 := []int{2, 5, 6}
