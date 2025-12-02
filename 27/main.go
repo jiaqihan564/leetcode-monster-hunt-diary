@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func removeElement(nums []int, val int) int {
-	n := len(nums) - 1
+	n := len(nums)
 
-	for i := 0; i <= n; {
-		if nums[i] == i {
-			nums[i] = nums[n]
+	for i := 0; i < n; {
+		if nums[i] == val {
+			nums[i] = nums[n-1]
 			n--
 		} else {
 			i++
